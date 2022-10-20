@@ -11,7 +11,46 @@
     <script type="module" src="/src/main.ts" defer></script>
   </head>
   <body>
-    <main>
+    <form class="customize">
+      <div class="customize__section">
+        <label for="trigger">Trigger event:</label>
+        <select name="trigger" id="trigger">
+          <option value="click">Click</option>
+          <option value="mouseover">Hover</option>
+        </select>
+      </div>
+      <div class="customize__section">
+        <label for="position">Position:</label>
+        <select name="position" id="position">
+          <option value="top">Top</option>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+          <option value="bottom">bottom</option>  
+        </select>
+      </div>
+      <div class="customize__section">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="Tooltip Title">
+      </div>
+      <div class="customize__section --textarea">
+        <label for="content">Content:</label>
+        <textarea name="content" id="content" cols="20" rows="3"></textarea>
+      </div>
+      <div class="customize__section">
+        <label for="close">Close Button:</label>
+        <input type="checkbox" name="close" id="close" checked>
+      </div>
+    </form>
+    <main class="parent">
+      <div class="main__content">
+        <h1>Parent Element</h1>
+        <span id="hint">Click me!</span>
+      </div>
     </main>
+    <section class="code">
+      <pre>
+        <code class="tooltip-code"></code>
+      </pre>
+    </section>
   </body>
 </html>

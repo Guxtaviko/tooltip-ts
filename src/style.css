@@ -9,23 +9,68 @@
   text-decoration: none;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
+:root {
+  --color-bg: white;
+  --color-dark: #212121;
+  --color-tooltip: #eee;
+  --color-primary: darkorchid;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Customize */
+.customize {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.customize__section {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.--textarea {
+  flex-direction: column;
+  gap: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.customize input, .customize textarea, .customize select {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid var(--color-dark);
+  padding: 0.25rem;
+}
+
+/* Main */
 main {
-  background: orangered;
+  background: var(--color-primary);
   width: 20rem;
   height: 20rem;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.main__content {
+  color: var(--color-bg);
+  text-align: center;
 }
 
 .tooltip {
-  background: #eee;
+  background: var(--color-tooltip);
   padding: 0.75rem;
   border-radius: 0.25rem;
 
@@ -35,6 +80,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  z-index: 69;
 }
 
 .tooltip h3 {
@@ -79,7 +125,7 @@ main {
 }
 
 .tooltip.bottom {
-  bottom: 0%;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
 }
