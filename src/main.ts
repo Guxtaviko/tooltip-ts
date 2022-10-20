@@ -67,13 +67,13 @@ tooltip({
 const customizeForm = document.querySelector('.customize') as HTMLFormElement
 customize(customizeForm)
 
-// const tooltipCode = document.querySelector('.tooltip-code') as HTMLElement
-// tooltipCode.innerHTML = `
-// tooltip({
-//   selector: '.parent',
-//   trigger: 'click',
-//   position: 'top',
-//   title: 'Tooltip Title',
-//   content: 'Tooltip example content',
-//   close: true
-// })`
+const tooltipCode = document.querySelector('.tooltip-code') as HTMLElement
+tooltipCode.innerHTML = `
+<span class="function">tooltip</span><span class="pontuation">({</span>
+  <span class="property">selector</span><span class="operator">:</span> <span class="string">'.parent'</span><span class="pontuation">,</span>
+  <span class="property">trigger</span><span class="operator">:</span> <span class="string">'click'</span><span class="pontuation">,</span>
+  <span class="property">position</span><span class="operator">:</span> <span class="string">'top'</span><span class="pontuation">,</span>
+  <span class="property">title</span><span class="operator">:</span> <span class="string">'Tooltip Title'</span><span class="pontuation">,</span>
+  <span class="property">content</span><span class="operator">:</span> <span class="string">'Tooltip example content'</span><span class="pontuation">,</span>
+  <span class="property">close</span><span class="operator">:</span> <span class="boolean">true</span>
+<span class="pontuation">})</span>`

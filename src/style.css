@@ -129,3 +129,40 @@ main {
   left: 50%;
   transform: translate(-50%, 100%);
 }
+
+/* Code */
+.code {
+  --color-function: springgreen;
+  --color-pontuation: grey;
+  --color-property: white;
+  --color-operator: aqua;
+  --color-string: orange;
+  --color-boolean: orchid;
+
+  background: var(--color-dark);
+  padding-inline: 1rem;
+}
+
+.code .function {
+  color: var(--color-function);
+}
+
+.code .pontuation {
+  color: var(--color-pontuation);
+}
+
+.code .property {
+  color: var(--color-property);
+}
+
+.code .operator {
+  color: var(--color-operator);
+}
+
+.code .string {
+  color: var(--color-string);
+}
+
+.code .boolean {
+  color: var(--color-boolean);
+}
